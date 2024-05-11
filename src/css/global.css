@@ -1,0 +1,93 @@
+body{
+    margin:0;
+    padding:0;
+}
+.mainInput{
+    /* border:1px solid black; */
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../public/bg.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mainInput > div{
+ background-color: black;
+ color:white;
+ border-radius: 10px;
+width: 50%;
+}
+@media only screen and (max-width: 767px){
+    .mainInput > div{
+        width:100%;
+    }
+}
+.buttn{
+    background-color: #F23638;
+    border:none;
+
+}
+input{
+    border:none;
+}
+.logo{
+    text-align: center;
+}
+.logo > img {
+    width: 25%;
+    height: auto;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.outputDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    width:100vw;
+    min-height: 100vh;
+}
+.aadharfront{
+   
+    justify-content: space-between;
+}
+
+.aadharfront>div {
+    margin:0 !important;
+    padding:0 !important;
+    
+    box-shadow: 0 0 5px 5px lightgray;
+    margin:5px;
+}
+.aadharback>div{
+    margin:0px !important;
+    padding:0px !important;
+   
+}
+.imgs,.frontfoot{
+    width: 100%;
+    height: auto;
+}
+@media only screen and (max-width:991px){
+    .pic{
+        width:50%;
+    }
+}
+/* @media only screen and (max-width:767px){
+    .outputDiv >div{
+        display: grid !important;
+        width: 100%;
+    }
+    .aadharback{
+        width: 100%;
+    }
+    .aadharfront{
+        width: 100%;
+    }
+} */
