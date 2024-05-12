@@ -37,6 +37,8 @@ const Output = () => {
         // console.log("random number", randomNumber)
         sentData.random = randomNumber;
     }
+
+    
     return (
         <div className="outputDiv">
 
@@ -47,7 +49,7 @@ const Output = () => {
                             <img src="/fonthead.jpg" height={30} width={30} alt="img" className='imgs' />
                         </div>
                         <div className="d-flex p-2">
-                            <img src="https://www.shutterstock.com/image-photo/close-head-shot-confident-serious-260nw-1481322794.jpg" height={200} width={200} alt="img" className='pic'/>
+                            <img src={sentData.photo ? sentData.photo:"/dummy2.jpg"} height={200} width={200} alt="img" className='pic'/>
                             <div className="p-2">
                                 <p><b>Name:</b>{" "} {sentData.name}</p>
                                 <p><b>Dob:</b>{" "}{getFormatedDate(sentData.dob)}</p>

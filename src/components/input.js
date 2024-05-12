@@ -48,7 +48,8 @@ const Input = () => {
                     "locality": locality,
                     "state": state,
                     "sex": sex,
-                    "zip": zip
+                    "zip": zip,
+                    "photo":photo
                 }
                 // console.log(photo);
                 parentData(data)
@@ -128,12 +129,12 @@ const Input = () => {
                                 </Form.Group>
 
                             </Row>
-                            {/* <Row>
+                            <Row>
                                 <Form.Group as={Col} className='col-12 col-md-4'>
                                     <Form.Label>Photo</Form.Label>
-                                    <Form.Control type="file" name='file' onChange={(e) => setPhoto(e.target.files[0])} />
+                                    <Form.Control type="file" name='file' onChange={(e) => setPhoto(URL.createObjectURL(e.target.files[0]))} />
                                 </Form.Group>
-                            </Row> */}
+                            </Row>
 
                             <Button className='btn buttn mb-3 mt-3  ' onClick={savedata} >
                                 Generate Aadhar
