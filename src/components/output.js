@@ -47,7 +47,7 @@ const Output = () => {
 
                 <div className="row aadharfront aadharback">
 
-                    <div className="col-12 col-md-5">
+                    <div className="col-12 col-lg-5">
                         <div>
                             <img src="/fonthead.jpg" height={30} width={30} alt="img" className='imgs' />
                         </div>
@@ -68,7 +68,7 @@ const Output = () => {
                             <img src="/frontfoot.jpg" height={30} width={30} alt="img" className="frontfoot" />
                         </div>
                     </div>
-                    <div className='col-12 col-md-5 '>
+                    <div className='col-12 col-lg-5 '>
                         <div className="">
                             <div>
 
