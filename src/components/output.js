@@ -26,7 +26,7 @@ const Output = () => {
         }
     }
 
-    console.log("senddata", sentData)
+    // console.log("senddata", sentData)
 
     if (typeof sentData !== 'object' || sentData === null) {
         sentData = {};
@@ -54,9 +54,9 @@ const Output = () => {
                         <div className="d-flex p-2">
                             <img src={sentData.photo ? sentData.photo : "/dummy2.jpg"} height={200} width={200} alt="img" className='pic' />
                             <div className="p-2">
-                                <p><b>Name:</b>{" "} {sentData.name ? sentData.name: "XXXXXXXXXX"}</p>
-                                <p><b>Dob:</b>{" "}{getFormatedDate(sentData.dob)? getFormatedDate(sentData.dob) : "xx/xx/xxxx"}</p>
-                                <p><b>Mobile:</b>{" "}{sentData.phone ? sentData.phone: "XXXXXXXXXX"}</p>
+                                <p><b>Name:</b>{" "} {sentData.name ? sentData.name : "XXXXXXXXXX"}</p>
+                                <p><b>Dob:</b>{" "}{getFormatedDate(sentData.dob) ? getFormatedDate(sentData.dob) : "xx/xx/xxxx"}</p>
+                                <p><b>Mobile:</b>{" "}{sentData.phone ? sentData.phone : "XXXXXXXXXX"}</p>
                                 <p><b>Sex:</b>{" "}{sentData.sex ? sentData.sex : 'XXXXX'}</p>
                             </div>
 
@@ -78,7 +78,7 @@ const Output = () => {
                                 <div className="w-100 ">
                                     <p><b>Address:</b></p>
                                     <p>C/O {sentData.fatherName ? sentData.fatherName : "XXXXXXXXXX"},</p>
-                                    <p>{sentData.address ? sentData.address:" XXXXXXXX"},{sentData.locality ? sentData.locality : 'XXXXXXXX'},</p>
+                                    <p>{sentData.address ? sentData.address : " XXXXXXXX"},{sentData.locality ? sentData.locality : 'XXXXXXXX'},</p>
                                     <p>{sentData.state ? sentData.state : "XXXXXXX"}{" "}-{" "}{sentData.zip ? sentData.zip : "XXXXXX"}</p>
                                 </div>
                                 <img src="/qr.png" height={200} width={200} alt="qr" className='pic' />
@@ -93,7 +93,7 @@ const Output = () => {
                         </div>
                     </div>
                     <div className='download mt-3'>
-                        <button className='btn btn-info' onClick={()=>window.print()}>Download</button>
+                        <button className='btn btn-info' onClick={() => window.print()}>Download</button>
                     </div>
                 </div>
 

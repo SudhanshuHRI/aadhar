@@ -80,18 +80,7 @@ input::-webkit-inner-spin-button {
         width:50%;
     }
 }
-/* @media only screen and (max-width:767px){
-    .outputDiv >div{
-        display: grid !important;
-        width: 100%;
-    }
-    .aadharback{
-        width: 100%;
-    }
-    .aadharfront{
-        width: 100%;
-    }
-} */
+
 
 .astrk> div >svg{
     color:red;
