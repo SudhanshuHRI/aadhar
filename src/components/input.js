@@ -32,7 +32,7 @@ const Input = () => {
 
         e.preventDefault();
         try {
-            if (name == '' || father == '' || dob == '' || address == '' || locality == '' || state == '' || sex == '' || zip == '') {
+            if (name == '' || father == '' || dob == '' || address == '' || locality == '' || state == '' || sex == '' || zip == '' || photo=='') {
                 alert("All fields are required!!");
             } else if (phone.length != 10) {
                 alert("Phone number should have 10 digits");
@@ -51,13 +51,10 @@ const Input = () => {
                     "zip": zip,
                     "photo":photo
                 }
-                // console.log(photo);
+               
                 parentData(data)
                 route("/output");
-                // const photo1 = new FormData();
-                // photo1.append("photo",photo)
-                // const resp = axios.post('%PUBLIC_URL%',photo1)
-                // console.log('resp',resp)
+         
 
             }
 
@@ -77,45 +74,45 @@ const Input = () => {
                             <img src='/Aadhaar_Logo.svg' height={100} width={100} />
                         </div>
                         <Form>
-                            <Row className="mb-3 mt-3">
+                            <Row className="mb-3 mt-3 astrk">
                                 <Form.Group as={Col} className='col-12 col-md-4' >
-                                    <Form.Label>Name</Form.Label>
+                                    <Form.Label>Name</Form.Label><FaStarOfLife />
                                     <Form.Control type="text" placeholder="Name" value={name} onChange={(e) => setNeme(e.target.value)} />
                                 </Form.Group>
 
                                 <Form.Group as={Col} className='col-12 col-md-4'>
-                                    <Form.Label>Father Name</Form.Label>
+                                    <Form.Label>Father Name</Form.Label><FaStarOfLife />
                                     <Form.Control type="text" placeholder="Father Name" value={father} onChange={(e) => setFather(e.target.value)} />
                                 </Form.Group>
                                 <Form.Group as={Col} className='col-12 col-md-4'>
-                                    <Form.Label>Date of Birth</Form.Label>
-                                    <Form.Control type="date" placeholder="Father Name" value={dob} onChange={(e) => setDob(e.target.value)} />
+                                    <Form.Label>Date of Birth</Form.Label><FaStarOfLife />
+                                    <Form.Control type="date" placeholder="Father Name" value={dob} onChange={(e) => setDob(e.target.value)} max={new Date()}/>
                                 </Form.Group>
                             </Row>
-                            <Row className="mb-3">
+                            <Row className="mb-3 astrk">
                                 <Form.Group as={Col} className='col-12 col-md-4'>
-                                    <Form.Label>Phone</Form.Label>
+                                    <Form.Label>Phone</Form.Label><FaStarOfLife />
                                     <Form.Control type='number' placeholder='Phone' value={phone} onChange={(e) => setPhone(e.target.value)} />
                                 </Form.Group>
 
                                 <Form.Group as={Col} className='col-12 col-md-4'>
-                                    <Form.Label>Address</Form.Label>
+                                    <Form.Label>Address</Form.Label><FaStarOfLife />
                                     <Form.Control type="text" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)} />
                                 </Form.Group>
                                 <Form.Group as={Col} className='col-12 col-md-4'>
-                                    <Form.Label>Locality</Form.Label>
+                                    <Form.Label>Locality</Form.Label><FaStarOfLife />
                                     <Form.Control type="text" placeholder="Locality" value={locality} onChange={(e) => setLocality(e.target.value)} />
                                 </Form.Group>
 
                             </Row>
 
-                            <Row className="mb-3">
+                            <Row className="mb-3 astrk">
                                 <Form.Group as={Col} className='col-12 col-md-4'>
-                                    <Form.Label>State</Form.Label>
+                                    <Form.Label>State</Form.Label><FaStarOfLife />
                                     <Form.Control type='text' placeholder='State' value={state} onChange={(e) => setState(e.target.value)} />
                                 </Form.Group>
                                 <Form.Group as={Col} className='col-12 col-md-4'>
-                                    <Form.Label>Sex</Form.Label>
+                                    <Form.Label>Sex</Form.Label><FaStarOfLife />
                                     <Form.Select defaultValue="Choose..." value={sex} onChange={(e) => setSex(e.target.value)}>
                                         <option>Choose...</option>
                                         <option>Male</option>
@@ -124,14 +121,14 @@ const Input = () => {
                                     </Form.Select>
                                 </Form.Group>
                                 <Form.Group as={Col} className='col-12 col-md-4'>
-                                    <Form.Label>Zip</Form.Label>
+                                    <Form.Label>Zip</Form.Label><FaStarOfLife />
                                     <Form.Control type="number" placeholder="Zip" value={zip} onChange={(e) => setZip(e.target.value)} />
                                 </Form.Group>
 
                             </Row>
-                            <Row>
-                                <Form.Group as={Col} className='col-12 col-md-4'>
-                                    <Form.Label>Photo</Form.Label>
+                            <Row className='astrk'>
+                                <Form.Group as={Col} className='col-12 col-md-12'>
+                                    <Form.Label>Photo</Form.Label><FaStarOfLife />   
                                     <Form.Control type="file" name='file' onChange={(e) => setPhoto(URL.createObjectURL(e.target.files[0]))} />
                                 </Form.Group>
                             </Row>

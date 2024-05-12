@@ -59,14 +59,15 @@ input::-webkit-inner-spin-button {
 }
 
 .aadharfront>div {
-    margin:0 !important;
+   
     padding:0 !important;
-    
-    box-shadow: 0 0 5px 5px lightgray;
+    border:1px solid black;
+    border-radius: 5px;
+    /* box-shadow: 0 0 5px 5px lightgray; */
     margin:5px;
 }
 .aadharback>div{
-    margin:0px !important;
+    
     padding:0px !important;
    
 }
@@ -91,3 +92,15 @@ input::-webkit-inner-spin-button {
         width: 100%;
     }
 } */
+
+.astrk> div >svg{
+    color:red;
+    font-size:6px;
+    margin-bottom:8px;
+}
+.download{
+    border:none !important;
+}
+.foot{
+    padding-top:5px;
+}
